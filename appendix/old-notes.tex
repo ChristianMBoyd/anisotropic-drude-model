@@ -1,0 +1,47 @@
+\section{Old notes}
+\label{appendix: Coulomb}
+
+
+\note{Below is mostly copied from other notes} -- these need to be incorporated into the main text.
+
+
+In the orthorhombic dielectric background considered in the main text,
+\begin{equation}
+\e = \bpm
+\ex & 0 & 0
+\\ 0 & \ey & 0
+\\ 0 & 0 & \ez
+\epm
+\end{equation}
+The dielectric anisotropy in Gauss's law can be handled through a coordinate transformation \cite{Mele2001,Ivchenko2021}
+\begin{equation}
+\lp x,y,z\rp \to \lp \frac{x}{\sqrt{\ex}}, \frac{y}{\sqrt{\ey}}, \frac{z}{\sqrt{\ez}}\rp
+\,\,\,.
+\end{equation}
+\note{Need to write out Gauss's law\ldots}
+
+
+The homogeneous solution $\phi_h$ to Gauss's law in vacuum (i.e., $z<0$ or $z>L$) can be enumerated through growing and decaying modes,
+\begin{equation}
+    \label{app phih vac def}
+    \phi_h(z) = \phi_- e^{-|q| z} + \phi_+ e^{+|q| z}
+    \,\,\,,
+\end{equation}
+where the $\phi_{\pm}$ are undetermined coefficients.  In the dielectric region ($0<z<L$), the homogeneous solutions remain exponentials but with the substitution $|q|\to\xi$,
+\begin{equation}
+    \label{app phih mat def}
+    \phi_h(z) = \phi_- e^{-\xi z} + \phi_+ e^{+\xi z}
+    \,\,\,.
+\end{equation}
+\note{Need to define $\xi$ here.}
+
+
+Note the altered boundary condition due to Gauss's law,
+\begin{align}
+    \label{app BC1 def}
+    \lim_{z\to z_B^-}\phi(z) &= \lim_{z\to z_B^+}\phi(z)\,\,\,,
+    \\ \label{app BC2 def}
+    \lim_{z\to z_B^-}\ez^-\partial_z\phi(z) &= \lim_{z\to z_B^+}\ez^+\partial_z\phi(z)
+    \,\,\,,
+\end{align}
+where the boundary is located at $z=z_B$ and $\ez^{\pm}$ is the $z-$component of the dielectric constant above ($+$) and below ($-$) the boundary.
