@@ -1,0 +1,40 @@
+\section{The anisotropic Drude model}
+
+This paper examies an anisotropic and homogeneous dielectric tensor,
+\begin{equation}
+    \label{dielectric tensor definition}
+    \e(\omega) = \bpm
+    \ex(\omega) & 0 & 0
+    \\ 0 & \ey(\omega) & 0
+    \\ 0 & 0 & \ez(\omega)
+    \epm
+    \,\,\,.
+\end{equation}
+Further, the diagonal entries of $\e$ \eqref{dielectric tensor definition} resemble the Drude model,
+\begin{equation}
+    \label{dielectric component Drude definition}
+    \e_j(\omega) = \e_{j,\infty}\lp 1-\frac{\omega_{p,j}^2}{\omega\lp\omega+i\Gamma\rp}\rp\,\,\,,
+\end{equation}
+where $j\in(x,y,z)$, the $\e_{j,\infty}$ phenomenologically model inter-band or background dielectric contributions, $\omega_{p,j}$ is the frequency of plasma oscillation along the $j$th axis,\footnote{In particular, the $\omega_{p,j}$ are the physical plasma frequencies that the plasmon would be observed at along the $j$th axis, not the unscreened value $\omega_p=\sqrt{ne^2/m\e_0}$.} and $\Gamma$ is the phenomenological scattering rate.  The choice of an isotropic scattering rate is for convenience; most of the subsequent study will focus on well-defined bulk excitations ($\omega\gg\Gamma$), where anisotropic scattering is presumed to not be the dominant effect.
+
+
+
+
+
+\subsection{Plasmon excitation}
+
+The bulk electrostatic excitations of the anisotropic dielectric tensor $\e$ of \eqref{dielectric tensor definition} can be studied through the {\it loss function},
+\begin{equation}
+    -\im \e^{-1}(\hat q, \omega) = \hat q \cdot \e^{-1}(\omega) \cdot \hat q
+    \,\,\,,
+\end{equation}
+where $\hat q$ is a unit wavevector due to the lack of wavevector dependence in $\e$.  Inverting $\e$,
+\begin{equation}
+    \label{bulk loss function}
+    -\im\e^{-1}(\hat q, \omega) = \sum_j \lp\frac{q_j^2}{q^2}\rp \lb -\im\e_{jj}^{-1}(\omega)\rb
+    =
+    \sum_j\lp\frac{q_j^2}{q^2}\rp\frac{\im\e_{jj}(\omega)}{|\e_{jj}(\omega)|^2}
+    \,\,\,.
+\end{equation}
+
+\note{Add figure}: not much else to say here.
