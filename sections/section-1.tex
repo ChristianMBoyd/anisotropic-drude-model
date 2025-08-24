@@ -13,9 +13,9 @@ This paper examies an anisotropic and homogeneous dielectric tensor,
 where the diagonal entries of $\e$ \eqref{dielectric tensor definition} resemble the Drude model,
 \begin{equation}
     \label{dielectric component Drude definition}
-    \e_j(\omega) = \e_{j,\infty}\lp 1-\frac{\omega_{p,j}^2}{\omega\lp\omega+i\Gamma\rp}\rp\,\,\,.
+    \e_j(\omega) = \e_{j,\infty}-\frac{\omega_{j,0}^2}{\omega\lp\omega+i\Gamma\rp}\,\,\,.
 \end{equation}
-In \eqref{dielectric component Drude definition}, $j\in(x,y,z)$, $\e_{j,\infty}$ phenomenologically models inter-band or background dielectric contributions oriented along the $j$th axis, $\omega_{p,j}$ is the frequency of plasma oscillation along the $j$th axis,\footnote{In particular, $\omega_{p,j}$ denotes the physical plasma frequency that would be observed for charge density oscillations along the $j$th axis, not the unscreened value $\omega_{p,0}=\sqrt{ne^2/m\e_0}$.} and $\Gamma$ is the phenomenological scattering rate.  The choice of an isotropic scattering rate is for convenience; most of the subsequent study will focus on well-defined bulk excitations ($\omega\gg\Gamma$), where anisotropic scattering is presumed to not be the dominant effect.
+In \eqref{dielectric component Drude definition}, $j\in(x,y,z)$, $\e_{j,\infty}$ phenomenologically models inter-band or background dielectric contributions oriented along the $j$th axis, $\omega_{j,0}$ is the {\it unscreened} frequency of plasma oscillation along the $j$th axis,\footnote{In particular, $\omega_{j,0}$ would correspond to the unscreened plasma frequency $\omega_{p,0}=\sqrt{ne^2/m\e_0}$ in an isotropic, free-electron model.  Due to the screening associated with $\e_{j,\infty}$, the physical plasma frequency along the $j$th axis in \eqref{dielectric component Drude definition} is suppressed as $\omega_{j,0}/\sqrt{\e_{j,\infty}}$.} and $\Gamma$ is the phenomenological scattering rate.  The choice of an isotropic scattering rate is for convenience; most of the subsequent study will focus on well-defined bulk excitations ($\omega\gg\Gamma$), where anisotropic scattering is presumed to not be the dominant effect.
 
 \note{Todo - consider anisotropic scattering?}
 
@@ -38,7 +38,7 @@ where $\hat q$ is a unit wavevector due to the lack of wavevector dependence in 
     \sum_{j=x,y,z}\lp\frac{q_j^2}{q^2}\rp\frac{\im\e_{jj}(\omega)}{|\e_{jj}(\omega)|^2}
     \,\,\,.
 \end{equation}
-In the regime of well-defined plasmon excitation, $\Gamma \ll \omega_j$ for all $j=x,y,z$, the plasmon dispersion roughly follows from zeros in the real part of the {\it longitudinal} dielectric function,
+In the regime of well-defined plasmon excitation, $\Gamma \ll \omega_{j,0}$ for all $j=x,y,z$, the plasmon dispersion roughly follows from zeros in the real part of the {\it longitudinal} dielectric function,
 \begin{equation}
     \e_L(\hat q,\omega) :=\hat q\cdot \e\cdot\hat q\,\,\,,
 \end{equation}
@@ -47,13 +47,13 @@ where $\hat q$ is a unit wavevector enforcing excitations along the longitudinal
     \label{longitudinal dielectric function without damping}
     \re\e_L(\hat q, \omega) \approx \e_L(\hat q, \omega)\Big|_{\Gamma = 0}
     =
-    \sum_{j=x,y,z}q_j^2\e_{j,\infty}\lp1 - \frac{\omega_j^2}{\omega^2}\rp
+    \sum_{j=x,y,z}q_j^2\lp\e_{j,\infty} - \frac{\omega_{j,0}^2}{\omega^2}\rp
     \,\,\,,
 \end{equation}
-which roughly provides the plasmon dispersion $\omega_p(\hat q)$ in terms of a simple formula,
+which determines the plasmon dispersion $\omega_p(\hat q)$ through the positive root,
 \begin{equation}
     \omega_p(\hat q) \approx 
-    \frac{\sum_{j=x,y,z}q_j^2 \omega_j^2}{\sum_{j=x,y,z}q_j^2 \e_{j,\infty}}
+    \sqrt{\frac{\sum_{j=x,y,z}q_j^2 \omega_{j,0}^2}{\hat q \cdot \e_{\infty} \cdot \hat q}}
     \,\,\,.
 \end{equation}
 \note{Add Gumhalter/other references}: This likely needs lots of references about this kind of dielectric function.
