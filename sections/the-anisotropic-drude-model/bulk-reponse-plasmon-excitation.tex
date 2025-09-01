@@ -1,0 +1,49 @@
+\subsection{Bulk response: plasmon excitation}
+
+The dielectric tensor $\e$ \eqref{dielectric tensor definition} governs the electrostatic response of the system through Gauss's law.  In a translation-invariant geometry,
+\begin{equation}
+    \label{translation invariant Gauss's law}
+    \e_L(\hat q,\omega) \phi(q,\omega) = \frac{\rho_{ext}(q,\omega)}{q^2 \e_0}\,\,\,,
+\end{equation}
+where $q$ is the wavevector, $\hat q$ is the {\it unit} wavevector, $\omega$ is the frequency, $\phi$ is the (total) electric potential, $\rho_{ext}$ is the free charge density external to the system under study, $\e_0$ is the permitivitty of free space due to working in S.I. units, and we've defined the {\it longitudinal} dielectric function,
+\begin{equation}
+    \label{longitudinal dielectric function}
+    \e_L(\hat q,\omega) := \hat q\cdot \e(\omega)\cdot \hat q\,\,\,.
+\end{equation}
+From Gauss's law \eqref{translation invariant Gauss's law}, the system contains a resonant, self-sustaining electrostatic excitation whenever $\e_L$ of \eqref{longitudinal dielectric function} vanishes.  As in the typical free-electron Drude model, this mode corresponds to the plasmon in the anisotropic Drude model of \eqref{dielectric component Drude definition}.
+
+The nature of plasmon excitation due to a model dielectric function can be studied through the {\it loss function},
+\begin{equation}
+    \label{bulk loss function}
+    -\im \e^{-1}_L(\hat q,\omega) = -\im\frac{1}{\e_L(\hat q,\omega)}
+    \,\,\,.
+\end{equation}
+In the regime of well-defined plasmon excitation ($\Gamma \ll \omega$ for $\omega$ near the plasma frequency), the plasmon dispersion roughly follows from zeros in the real part of the longitudinal dielectric function \eqref{longitudinal dielectric function}.  As a first approximation,
+\begin{equation}
+    \label{real part of longitudinal dielectric function without damping}
+    \re\e_L(\hat q, \omega) \approx \e_L(\hat q, \omega)\Big|_{\Gamma = 0}
+    =
+    \sum_{j=x,y,z} \hat q_j^2\lp\e_{j,\infty} - \frac{\omega_{j,0}^2}{\omega^2}\rp
+    \,\,\,,
+\end{equation}
+which determines the plasmon dispersion $\omega_p(\hat q)$ through the positive root,
+\begin{equation}
+    \label{approximate plasmon dispersion}
+    \omega_p(\hat q) \approx 
+    \sqrt{\frac{\sum_{j=x,y,z} \hat q_j^2 \omega_{j,0}^2}{\hat q \cdot \e_{\infty} \cdot \hat q}}
+    \,\,\,.
+\end{equation}
+We should expect from \eqref{approximate plasmon dispersion} that plasmon excitation smoothly varies from its value along one axis to another as the orientation is rotated between the two.
+
+\note{[Add Gumhalter/other references]}: This likely needs lots of references about this kind of dielectric function.
+
+In Figure~\ref{figure: anisotropic plasmon spectrum}, the loss function \eqref{bulk loss function} is plotted for the anisotropic Drude model as a function of frequency $\omega$ and orientation $\theta$.  The wavevector orientation $\hat q$ was chosen to lie within the $xy$-plane, where $\theta$ is the azimuthal angle measured counterclockwise from the $x$-axis.  
+
+\begin{figure}
+    \centering
+    % \includegraphics[width=0.5\columnwidth]{figures/superlattice-geometry.pdf}
+    \caption{
+        \note{Todo}: create plot and caption.
+    }
+    \label{figure: anisotropic plasmon spectrum}
+\end{figure}
