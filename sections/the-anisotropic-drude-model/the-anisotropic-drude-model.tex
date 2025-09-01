@@ -1,0 +1,23 @@
+\section{The anisotropic Drude model}
+
+This paper examines an electrostatic system governed by an anisotropic and homogeneous dielectric tensor,
+\begin{equation}
+    \label{dielectric tensor definition}
+    \e(\omega) = \bpm
+    \ex(\omega) & 0 & 0
+    \\ 0 & \ey(\omega) & 0
+    \\ 0 & 0 & \ez(\omega)
+    \epm
+    \,\,\,,
+\end{equation}
+where the diagonal entries of $\e$ \eqref{dielectric tensor definition} resemble the Drude model,
+\begin{equation}
+    \label{dielectric component Drude definition}
+    \e_j(\omega) = \e_{j,\infty}-\frac{\omega_{j,0}^2}{\omega\lp\omega+i\Gamma\rp}\,\,\,.
+\end{equation}
+In \eqref{dielectric component Drude definition}, $j\in(x,y,z)$, $\e_{j,\infty}$ phenomenologically models inter-band or background dielectric contributions oriented along the $j$th axis, $\omega_{j,0}$ is the {\it unscreened} frequency of plasma oscillation along the $j$th axis,\footnote{In particular, $\omega_{j,0}$ would correspond to the unscreened plasma frequency $\omega_{p,0}=\sqrt{ne^2/m\e_0}$ in an isotropic, free-electron model.  Due to the screening associated with $\e_{j,\infty}$, the physical plasma frequency along the $j$th axis in \eqref{dielectric component Drude definition} is suppressed as $\omega_{j,0}/\sqrt{\e_{j,\infty}}$.} and $\Gamma$ is the phenomenological scattering rate.  The choice of an isotropic scattering rate is for convenience; most of the subsequent study will focus on well-defined bulk excitations ($\omega\gg\Gamma$), where anisotropic scattering is presumed to not be the dominant effect.
+
+\note{Todo - consider anisotropic scattering?}
+
+
+\input{sections/the-anisotropic-drude-model/bulk-reponse-plasmon-excitation.tex}
