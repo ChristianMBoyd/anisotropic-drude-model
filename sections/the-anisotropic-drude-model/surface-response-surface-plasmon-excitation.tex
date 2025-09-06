@@ -1,1 +1,44 @@
 \subsection{Surface response: surface plasmon excitation}
+
+Let's now consider the semi-infinite geometry of Figure~\ref{figure: semi-infinite geometry}, where the region governed by the dielectric tensor $\e$ \eqref{dielectric tensor definition} is restricted to the slab $z>0$.  The translation-invariance is explicitly broken by the $z=0$ surface place, which suggests studying Gauss's law via
+\begin{equation}
+    \label{surface Gauss's law}
+    \lb\qp^2\cdot\ep(\hat \qp,\omega) - \e_{zz}(\omega)\partial_z^2\rb\phi(\qp,\omega, z) = 0
+    \,\,\,,
+\end{equation}
+where $\qp$ is the planar wavevector along the $xy$-axes, $\hat\qp$ is the {\it unit} planar wavevector, and where we've defined the planar dielectric function,
+\begin{equation}
+    \ep(\hat \qp,\omega) := \hat q_{\parallel, x}^2 \ex(\omega) + \hat q_{\parallel,y}^2 \ey(\omega)
+    \,\,\,.
+\end{equation}
+The homogeneous solutions to Gauss's law in the absence of sources \eqref{surface Gauss's law} are growing and decaying exponentials,
+\begin{equation}
+    \label{surface Gauss's law solutions}
+    \phi_{\pm}(\qp,\omega, z) = 
+    \phi_{\pm0}(\qp,\omega) \exp\lb \pm|\qp|\sqrt{\frac{\ep(\hat\qp,\omega)}{\ez(\omega)}} \rb
+    \,\,\,,
+\end{equation}
+where the $\phi_{\pm}$ enumerate both growing ($+$) and decaying ($-$) modes, $\phi_{\pm0}$ are undetermined $z$-independent coefficients, and the root within the exponential is chosen such that it has positive real part.\footnote{This choice of root in \eqref{surface Gauss's law solutions} allows us to enforce the growing/decaying nature of these solutions.}
+
+\begin{figure}
+    \centering
+    % \includegraphics[width=0.5\columnwidth]{figures/superlattice-geometry.pdf}
+    \caption{
+        \note{Todo}: create semi-infinite geometry figure and caption.
+    }
+    \label{figure: semi-infinite geometry}
+\end{figure}
+
+Identifying the resonant modes of the surface geometry in Figure~\ref{figure: semi-infinite geometry} requires applying boundary conditions to the potential $\phi$ determined via \eqref{surface Gauss's law solutions}.  By requiring a bounded solution as $z\to\pm\infty$,
+\begin{equation}
+    \label{undetermined surface potential}
+    \phi(\qp,\omega,z) = 
+    \begin{cases}
+        z < 0\quad, & 
+        \phi_{0+}(\qp,\omega) \exp\lb+|\qp|\sqrt{\ep(\hat\qp,\omega)/\e_{zz}(\omega)}\rb
+        \\
+        z > 0\quad, & 
+        \phi_{0-}(\qp,\omega) \exp\lb-|\qp|\sqrt{\ep(\hat\qp,\omega)/\e_{zz}(\omega)}\rb
+    \end{cases}
+    \,\,\,.
+\end{equation}
